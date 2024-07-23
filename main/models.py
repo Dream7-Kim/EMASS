@@ -13,4 +13,7 @@ class Choice(models.Model):
 class Instruction(models.Model):
     content = models.CharField(max_length=1000)
 
+class BcColor(models.Model):
+    color = models.CharField(max_length=100, default='rgb(254, 222, 117)')
+
 

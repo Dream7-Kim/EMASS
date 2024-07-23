@@ -1,0 +1,52 @@
+#newuser {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+}
+
+.square {
+    background-color: white;
+    border: 1px solid black;
+    margin: 4px !important;
+    padding: 4px !important;
+}
+
+.input-group {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.row>* {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.square .input-group:nth-child(2) {
+    margin-top: 14px !important;
+}
+
+.square .input-group:nth-child(3) {
+    margin-top: 14px !important;
+}
+
+.row {
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+}
+
+.container {
+    padding: 0 !important;
+}
+
+#image {
+    display: none;
+}
+
+#avatar {
+    cursor: pointer;
+}
+
+span {
+    font-weight: 500;
+}

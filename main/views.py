@@ -4,9 +4,29 @@ from django.views.decorators.csrf import csrf_exempt
 from main.models import *
 import json
 
+def getBCcolor():
+    record = BcColor.objects.all().first()
+    if record is None:
+        return 'rgb(254, 222, 117)'
+    else:
+        return record.color
 
 def index(request):
-    return render(request, 'main/index.html', None)
+    bccolor = getBCcolor()
+
+    inss = Instruction.objects.all()
+    return render(request, 'main/index.html', {
+        'bccolor': bccolor,
+        'instructions': inss
+    })
+
+def newuser(request):
+    bccolor = getBCcolor()
+    levelrange = list(range(4,16))
+    return render(request, 'main/newuser.html', {
+        'bccolor': bccolor,
+        'levelrange': levelrange
+    })
 
 # APIs
 @csrf_exempt
@@ -18,5 +38,15 @@ def instruction(request):
         Instruction.objects.all().delete()
         for row in data:
             new_row = Instruction.objects.create(content=row)
+        return JsonResponse({'status': 'success'})
+    
+@csrf_exempt
+def changebccolor(request):
+    if request.method == 'GET':
+        return HttpResponse('')
+    elif request.method == 'POST':
+        data = json.loads(request.body)
+        BcColor.objects.all().delete()
+        new_row = BcColor.objects.create(color=data)
         return JsonResponse({'status': 'success'})
 

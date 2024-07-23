@@ -1,0 +1,488 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'main/newuser.css' %}">
+{% endblock %}
+
+{% block leftbar %}
+<div class="left-bar-items">
+    <div class="left-bar-item current">
+        <a href="">Add New Student</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Class Schedule</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Membership Plans</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Rank Requirements</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Newsletters</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Documents</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Videos</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Events</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Merchandise</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block topbar %}
+<div class="top-bar">
+    <div class="top-bar-item">
+        <a href="">Students</a>
+    </div>
+    <div class="top-bar-item">
+        <a href="">Attendance</a>
+    </div>
+    <div class="top-bar-item">
+        <a href="">Rank / <br />Tests</a>
+    </div>
+    <div class="top-bar-item">
+        <a href="">Prospects - <br />Appointments</a>
+    </div>
+    <div class="top-bar-item">
+        <a href="">E-mail Blasts</a>
+    </div>
+    <div class="top-bar-item">
+        <a href="">Payments</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="main">
+    <form id="newuser" action="" style="position: relative;">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="row square"
+                        style="height: calc(100% - 6px); justify-content: center; align-items: center;"
+                        id="avatar">
+                        <input type="file" id="image" name="image" accept="image/*" required>
+                        <img src="" alt="" id="preview"
+                            style="max-width: 100%; height: auto; display: block;">
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-7" style="height: 100%;">
+                            <div class="row square">
+                                <div class="input-group">
+                                    <span class="input-group-text">Name</span>
+                                    <input type="text" name="firstname" placeholder="First"
+                                        class="form-control form-control-sm">
+                                    <input type="text" name="middlename" placeholder="Middle"
+                                        class="form-control form-control-sm">
+                                    <input type="text" name="lastname" placeholder="Last"
+                                        class="form-control form-control-sm">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-text">Nickname (if preferred):</span>
+                                    <input type="text" name="nickname" placeholder="Nickname"
+                                        class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="row square">
+                                <div class="input-group">
+                                    <span class="input-group-text">Enrollment Data</span>
+                                    <input type="text" name="enrollmentDate" placeholder="Nickname"
+                                        class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            <div class="row square">
+                                <div class="col-8">
+                                    <div class="input-group">
+                                        <span class="input-group-text">Birthday</span>
+                                        <input type="date" name="birthday" placeholder="Birthday"
+                                            class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="input-group">
+                                        <span class="input-group-text">Age</span>
+                                        <input type="text" name="age" placeholder="25"
+                                            class="form-control form-control-sm" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="row square">
+                                <div class="input-group">
+                                    <span class="input-group-text">Address</span>
+                                    <input type="text" name="address1" placeholder=""
+                                        class="form-control form-control-sm">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-text" style="color: #F8F9FA;">Address</span>
+                                    <input type="text" name="address2" placeholder=""
+                                        class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row square">
+                                <div class="input-group">
+                                    <span class="input-group-text">Cell Phone</span>
+                                    <input type="text" name="cellphone" placeholder=""
+                                        class="form-control form-control-sm" required>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-text">2<sup>nd</sup> Phone</span>
+                                    <input type="text" name="2ndphone" placeholder=""
+                                        class="form-control form-control-sm" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-9">
+                    <div class="row square">
+                        <div class="input-group">
+                            <span class="input-group-text">Emergency Contact #1</span>
+                            <input type="text" name="ec1name" placeholder="Name"
+                                class="form-control form-control-sm">
+                            <input type="text" name="ec1phone" placeholder="Phone"
+                                class="form-control form-control-sm">
+                            <input type="text" name="ec1relationship" placeholder="Relationship"
+                                class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="row square">
+                        <div class="input-group">
+                            <span class="input-group-text">Emergency Contact #2</span>
+                            <input type="text" name="ec2name" placeholder="Name"
+                                class="form-control form-control-sm">
+                            <input type="text" name="ec2phone" placeholder="Phone"
+                                class="form-control form-control-sm">
+                            <input type="text" name="ec2relationship" placeholder="Relationship"
+                                class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="row square">
+                        <div class="row">
+                            <div class="col-4">
+                                <span style="margin-left: 8px;">Medical Conditions:</span>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        (None)
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="medicalCondition">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        (Yes)
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="medicalCondition"
+                                        checked>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 8px !important;">
+                            <div class="input-group">
+                                <span class="input-group-text">(Describe)</span>
+                                <input type="text" name="medicalConditionDescribe1" placeholder=""
+                                    class="form-control form-control-sm">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text" style="color: #F8F9FA;">(Describe)</span>
+                                <input type="text" name="medicalConditionDescribe2" placeholder=""
+                                    class="form-control form-control-sm">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 0 !important; margin-right: 0 !important;">
+                        <div class="col-6">
+                            <div class="row square">
+                                <div class="input-group">
+                                    <span class="input-group-text">Previous Training</span>
+                                    <input type="text" name="previousTraining" placeholder=""
+                                        class="form-control form-control-sm" required>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-text">How Long?</span>
+                                    <input type="text" name="howLong" placeholder=""
+                                        class="form-control form-control-sm" required>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-text">Rank Achieved</span>
+                                    <input type="text" name="rankAchieved" placeholder=""
+                                        class="form-control form-control-sm" required>
+                                </div>
+                                <span class="input-group-text" style="margin-top: 14px !important;">Reason
+                                    for
+                                    Discounting Previous Style</span>
+                                <div class="input-group">
+                                    <input type="text" name="reason" placeholder=""
+                                        class="form-control form-control-sm" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row square">
+                                <span class="input-group-text"
+                                    style="margin-top: 14px !important;">Motivations
+                                    / Reasons for Joining Us</span>
+                                <div class="input-group" style="margin-top: 0 !important;">
+                                    <textarea type="text" name="motivation" placeholder=""
+                                        class="form-control form-control-sm"></textarea>
+                                </div>
+
+                                <span class="input-group-text" style="margin-top: 28px !important;">How they
+                                    heard about us</span>
+                                <div class="input-group" style="margin-bottom: 14px !important;">
+                                    <textarea type="text" name="heard" placeholder=""
+                                        class="form-control form-control-sm"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row square" style="margin-right: 8px !important;">
+                        <span class="input-group-text" style="text-align: center;">Notes</span>
+                        <div class="input-group" style="margin-top: 0px !important;">
+                            <textarea type="text" rows="20" name="notes" placeholder=""
+                                class="form-control form-control-sm"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7">
+                    <div class="row square">
+                        <p class="h4 center">Approximate Rank Tests Based on Enrollment Date</p>
+
+                        <span style="margin-top: 8px !important;">Do Students take their first test to get
+                            1<sup>st</sup> Level (White
+                            Belt?)</span>
+                        <div class="row">
+                            <div class="col-6"></div>
+                            <div class="col-2">
+                                <label class="form-check-label">
+                                    Yes
+                                </label>
+                                <input class="form-check-input" type="radio" name="firstlevel" checked>
+                            </div>
+                            <div class="col-2">
+                                <label class="form-check-label">
+                                    No
+                                </label>
+                                <input class="form-check-input" type="radio" name="firstlevel">
+                            </div>
+                            <div class="col-2"><span><u>or</u></span></div>
+                        </div>
+
+                        <span style="margin-top: 8px !important;">Do Students take their first test to get
+                            2<sup>nd</sup> Level (Yellow
+                            Belt?)</span>
+                        <div class="row">
+                            <div class="col-6"></div>
+                            <div class="col-2">
+                                <label class="form-check-label">
+                                    Yes
+                                </label>
+                                <input class="form-check-input" type="radio" name="secondlevel" checked>
+                            </div>
+                            <div class="col-2">
+                                <label class="form-check-label">
+                                    No
+                                </label>
+                                <input class="form-check-input" type="radio" name="secondlevel">
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 24px !important;">
+                            <div class="row">
+                                <div class="col-3">
+                                    <span>1<sup>st</sup> Level</span>
+                                </div>
+                                <div class="col-3">
+
+                                </div>
+                                <div class="col-5">
+                                    <input type="date" name="level1date" placeholder=""
+                                        class="form-control form-control-sm">
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-top: 8px !important;">
+                                <div class="col-3">
+                                    <span>2<sup>nd</sup> Level</span>
+                                </div>
+                                <div class="col-3">
+
+                                </div>
+                                <div class="col-5">
+                                    <input type="date" name="level2date" placeholder=""
+                                        class="form-control form-control-sm">
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-top: 8px !important;">
+                                <div class="col-3">
+                                    <span>3<sup>rd</sup> Level</span>
+                                </div>
+                                <div class="col-3">
+
+                                </div>
+                                <div class="col-5">
+                                    <input type="date" name="level3date" placeholder=""
+                                        class="form-control form-control-sm">
+                                </div>
+                            </div>
+
+                            {% for level in levelrange %}
+                            <div class="row" style="margin-top: 8px !important;">
+                                <div class="col-3">
+                                    <span>{{ level }}<sup>th</sup> Level</span>
+                                </div>
+                                <div class="col-3">
+
+                                </div>
+                                <div class="col-5">
+                                    <input type="date" name="level{{ level }}date" placeholder=""
+                                        class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="row square">
+                        <p class="h4 center">Payment Agreement</p>
+
+                        <div class="row" style="margin-top: 8px !important;">
+                            <div class="col-6">
+                                <span>Signed Agreement</span>
+                            </div>
+                            <div class="col-2">
+                                <label class="form-check-label">
+                                    Yes
+                                </label>
+                                <input class="form-check-input" type="radio" name="agreement" checked>
+                            </div>
+                            <div class="col-2">
+                                <label class="form-check-label">
+                                    No
+                                </label>
+                                <input class="form-check-input" type="radio" name="agreement">
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 8px !important;">
+                            <div class="col-6">
+                                <span>Tuition Amount</span>
+                            </div>
+                            <div class="col-5">
+                                <input type="number" name="tuitionamount" placeholder=""
+                                    class="form-control form-control-sm" min="1" max="200" step="1"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 8px !important;">
+                            <div class="col-6">
+                                <span><b>Payment Due</b></span>
+                                <div class="input-group"
+                                    style="border: 1px solid black; padding: 4px !important;">
+                                    <span class="input-group-text">Every</span>
+                                    <input type="number" class="form-control" min="1" max="31" step="1"
+                                        name="monthstart">
+                                    <span class="input-group-text"><sup>th</sup> day of the month</span>
+                                </div>
+                                <div class="input-group"
+                                    style="border: 1px solid black; padding: 4px !important; margin-top: 8px !important;">
+                                    <span class="input-group-text">Every</span>
+                                    <input type="number" class="form-control" min="1" max="12" step="1"
+                                        name="yearstart">
+                                    <span class="input-group-text">of the following year</span>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-4" style="padding-top: 36px !important;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tuitionperiod"
+                                        checked>
+                                    <label class="form-check-label">
+                                        Monthly
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tuitionperiod">
+                                    <label class="form-check-label">
+                                        Annual
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tuitionperiod">
+                                    <label class="form-check-label">
+                                        Other
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 36px !important;">
+                            <span style="margin-top: 8px !important;">Entry Fee, Registration and other Fees
+                                Paid upon Enrollment?</span>
+                            <div class="row">
+                                <div class="col-6"></div>
+                                <div class="col-2">
+                                    <label class="form-check-label">
+                                        Yes
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="uponEnrollment"
+                                        checked>
+                                </div>
+                                <div class="col-2">
+                                    <label class="form-check-label">
+                                        No
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="uponEnrollment">
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+                            <span style="margin-top: 8px !important;">(This Software Program is Not a
+                                contract)</span>
+                            <span style="margin-top: 8px !important;">Actual Fees and Penalties should be
+                                Agreed Upon and Signed Prior to enrollment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button type="submit" class="button" style="position: absolute; bottom: 64px; right: 32px;">Save to
+            Add
+            Student</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'main/js/newuser.js' %}"></script>
+{% endblock %}

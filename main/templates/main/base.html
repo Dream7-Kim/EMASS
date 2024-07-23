@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMASS</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/bootstrap.min.css' %}">
+    {% block stylesheet %}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="color-panel">
+        <div class="bc-color color1"></div>
+        <div class="bc-color color2"></div>
+        <div class="bc-color color3"></div>
+        <div class="bc-color color4"></div>
+        <div class="bc-color color5"></div>
+    </div>
+    <div id="app" style="background-color: {{ bccolor }};">
+        <div class="left-bar">
+            <div class="logo">
+                <div class="red-bc"></div>
+                <img src="{% static 'main/images/13.png' %}" alt="" style="pointer-events: none;">
+            </div>
+            {% block leftbar %}
+            <div class="left-bar-items">
+                <div class="left-bar-item">
+                    <a href="newuser">Add New Student</a>
+                </div>
+                <div class="left-bar-item">
+                    <a href="">Class Schedule</a>
+                </div>
+                <div class="left-bar-item">
+                    <a href="">Membership Plans</a>
+                </div>
+                <div class="left-bar-item">
+                    <a href="">Rank Requirements</a>
+                </div>
+                <div class="left-bar-item">
+                    <a href="">Newsletters</a>
+                </div>
+                <div class="left-bar-item">
+                    <a href="">Documents</a>
+                </div>
+                <div class="left-bar-item">
+                    <a href="">Videos</a>
+                </div>
+                <div class="left-bar-item">
+                    <a href="">Events</a>
+                </div>
+                <div class="left-bar-item">
+                    <a href="">Merchandise</a>
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+        <div class="right-part">
+            <div class="app-title">
+                <img src="{% static 'main/images/xiaolong.png' %}" alt="">
+                <div>
+                    <a href="/">
+                        <div>The Easy Martial Arts School Software</div>
+                    </a>
+                </div>
+                <img src="{% static 'main/images/xiaolong.png' %}" alt="" style="transform: scaleX(-1);">
+            </div>
+            {% block topbar %}
+            <div class="top-bar">
+                <div class="top-bar-item">
+                    <a href="">Students</a>
+                </div>
+                <div class="top-bar-item">
+                    <a href="">Attendance</a>
+                </div>
+                <div class="top-bar-item">
+                    <a href="">Rank / <br />Tests</a>
+                </div>
+                <div class="top-bar-item">
+                    <a href="">Prospects - <br />Appointments</a>
+                </div>
+                <div class="top-bar-item">
+                    <a href="">E-mail Blasts</a>
+                </div>
+                <div class="top-bar-item">
+                    <a href="">Payments</a>
+                </div>
+            </div>
+            {% endblock %}
+
+            {% block main %}
+            <div id="main">
+                <div class="clock"></div>
+                <div class="instruction-container">
+                    <div class="instruction">
+                        <div class="h1">Quick Notes -</div>
+                        <div class="left-pad">
+                            {% for ins in instructions %}
+                            <p class="h3">{{ ins.content }}</p>
+                            {% endfor %}
+                            <textarea id="instruction" name="instruction" rows="4" cols="50"></textarea>
+                        </div>
+                        <div class="button" id="edit">Edit</div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+    <script src="{% static 'main/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'main/js/moment.min.js' %}"></script>
+    <script src="{% static 'main/js/base.js' %}"></script>
+    {% block script %}
+    {% endblock %}
+</body>
+
+</html>
