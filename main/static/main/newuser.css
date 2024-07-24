@@ -47,6 +47,14 @@
     cursor: pointer;
 }
 
+#waiver-row {
+    cursor: pointer;
+}
+
+#waiver {
+    display: none;
+}
+
 span {
     font-weight: 500;
 }

@@ -67,25 +67,23 @@
             <div class="row">
                 <div class="col-2">
                     <div class="row square"
-                        style="height: calc(100% - 6px); justify-content: center; align-items: center;"
-                        id="avatar">
-                        <input type="file" id="image" name="image" accept="image/*" required>
-                        <img src="" alt="" id="preview"
-                            style="max-width: 100%; height: auto; display: block;">
+                        style="height: calc(100% - 6px); justify-content: center; align-items: center;" id="avatar">
+                        <input type="file" id="image" name="image" accept="image/*">
+                        <img src="" alt="" id="preview" style="max-width: 100%; height: auto; display: block;">
                     </div>
                 </div>
                 <div class="col-10">
                     <div class="row">
-                        <div class="col-7" style="height: 100%;">
+                        <div class="col-8" style="height: 100%;">
                             <div class="row square">
                                 <div class="input-group">
                                     <span class="input-group-text">Name</span>
                                     <input type="text" name="firstname" placeholder="First"
-                                        class="form-control form-control-sm">
+                                        class="form-control form-control-sm" required>
                                     <input type="text" name="middlename" placeholder="Middle"
                                         class="form-control form-control-sm">
                                     <input type="text" name="lastname" placeholder="Last"
-                                        class="form-control form-control-sm">
+                                        class="form-control form-control-sm" required>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-text">Nickname (if preferred):</span>
@@ -94,29 +92,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5">
+                        <div class="col-4">
                             <div class="row square">
                                 <div class="input-group">
                                     <span class="input-group-text">Enrollment Date</span>
                                     <input type="date" name="enrollmentDate" placeholder=""
-                                        class="form-control form-control-sm">
+                                        class="form-control form-control-sm" required>
                                 </div>
                             </div>
                             <div class="row square">
-                                <div class="col-8">
+                                <div class="col-12">
                                     <div class="input-group">
                                         <span class="input-group-text">Birthday</span>
                                         <input type="date" name="birthday" placeholder="Birthday"
-                                            class="form-control form-control-sm">
+                                            class="form-control form-control-sm" required>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                {% comment %} <div class="col-4">
                                     <div class="input-group">
                                         <span class="input-group-text">Age</span>
                                         <input type="text" name="age" placeholder="25"
                                             class="form-control form-control-sm" disabled>
                                     </div>
-                                </div>
+                                </div> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -126,12 +124,12 @@
                                 <div class="input-group">
                                     <span class="input-group-text">Address</span>
                                     <input type="text" name="address1" placeholder=""
-                                        class="form-control form-control-sm">
+                                        class="form-control form-control-sm" required>
                                 </div>
                                 <div class="input-group">
-                                    <span class="input-group-text" style="color: #F8F9FA;">Address</span>
+                                    <span class="input-group-text" style="opacity: 0;">Address</span>
                                     <input type="text" name="address2" placeholder=""
-                                        class="form-control form-control-sm">
+                                        class="form-control form-control-sm" required>
                                 </div>
                             </div>
                         </div>
@@ -139,12 +137,12 @@
                             <div class="row square">
                                 <div class="input-group">
                                     <span class="input-group-text">Cell Phone</span>
-                                    <input type="text" name="cellphone" placeholder=""
+                                    <input id="phone1" type="text" name="cellphone" placeholder=""
                                         class="form-control form-control-sm" required>
                                 </div>
                                 <div class="input-group">
-                                    <span class="input-group-text">2<sup>nd</sup> Phone</span>
-                                    <input type="text" name="2ndphone" placeholder=""
+                                    <span class="input-group-text">2<sup>nd</sup>&nbsp;Phone</span>
+                                    <input id="phone2" type="text" name="2ndphone" placeholder=""
                                         class="form-control form-control-sm" required>
                                 </div>
                             </div>
@@ -157,23 +155,23 @@
                     <div class="row square">
                         <div class="input-group">
                             <span class="input-group-text">Emergency Contact #1</span>
-                            <input type="text" name="ec1name" placeholder="Name"
-                                class="form-control form-control-sm">
-                            <input type="text" name="ec1phone" placeholder="Phone"
-                                class="form-control form-control-sm">
+                            <input type="text" name="ec1name" placeholder="Name" class="form-control form-control-sm"
+                                required>
+                            <input type="text" id="phone3" name="ec1phone" placeholder="Phone"
+                                class="form-control form-control-sm" required>
                             <input type="text" name="ec1relationship" placeholder="Relationship"
-                                class="form-control form-control-sm">
+                                class="form-control form-control-sm" required>
                         </div>
                     </div>
                     <div class="row square">
                         <div class="input-group">
                             <span class="input-group-text">Emergency Contact #2</span>
-                            <input type="text" name="ec2name" placeholder="Name"
-                                class="form-control form-control-sm">
-                            <input type="text" name="ec2phone" placeholder="Phone"
-                                class="form-control form-control-sm">
+                            <input type="text" name="ec2name" placeholder="Name" class="form-control form-control-sm"
+                                required>
+                            <input type="text" id="phone4" name="ec2phone" placeholder="Phone"
+                                class="form-control form-control-sm" required>
                             <input type="text" name="ec2relationship" placeholder="Relationship"
-                                class="form-control form-control-sm">
+                                class="form-control form-control-sm" required>
                         </div>
                     </div>
                     <div class="row square">
@@ -194,8 +192,7 @@
                                     <label class="form-check-label">
                                         (Yes)
                                     </label>
-                                    <input class="form-check-input" type="radio" name="medicalCondition"
-                                        checked>
+                                    <input class="form-check-input" type="radio" name="medicalCondition" checked>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +203,7 @@
                                     class="form-control form-control-sm">
                             </div>
                             <div class="input-group">
-                                <span class="input-group-text" style="color: #F8F9FA;">(Describe)</span>
+                                <span class="input-group-text" style="opacity: 0;">(Describe)</span>
                                 <input type="text" name="medicalConditionDescribe2" placeholder=""
                                     class="form-control form-control-sm">
                             </div>
@@ -215,44 +212,64 @@
                     <div class="row" style="margin-left: 0 !important; margin-right: 0 !important;">
                         <div class="col-6">
                             <div class="row square">
-                                <div class="input-group">
-                                    <span class="input-group-text">Previous Training</span>
-                                    <input type="text" name="previousTraining" placeholder=""
-                                        class="form-control form-control-sm" required>
+                                <span class="input-group-text"
+                                    style="padding: .375rem .75rem !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">Previous
+                                    Training Instructor</span>
+                                <div class="input-group" style="margin-top: 0 !important;">
+                                    <input type="text" name="previousTraningInstructor" placeholder=""
+                                        class="form-control form-control-sm"
+                                        style="border-top-left-radius: 0; border-top-right-radius: 0;">
                                 </div>
-                                <div class="input-group">
+
+                                <span class="input-group-text"
+                                    style="margin-top: 14px !important; padding: .375rem .75rem !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">Previous
+                                    Training Style</span>
+                                <div class="input-group" style="margin-top: 0 !important;">
+                                    <input type="text" name="previousTraningStyle" placeholder=""
+                                        class="form-control form-control-sm"
+                                        style="border-top-left-radius: 0; border-top-right-radius: 0;">
+                                </div>
+
+                                <div class="input-group" style="margin-top: 14px !important;">
                                     <span class="input-group-text">How Long?</span>
                                     <input type="text" name="howLong" placeholder=""
                                         class="form-control form-control-sm" required>
                                 </div>
-                                <div class="input-group">
+
+                                <div class="input-group" style="margin-top: 14px !important;">
                                     <span class="input-group-text">Rank Achieved</span>
                                     <input type="text" name="rankAchieved" placeholder=""
                                         class="form-control form-control-sm" required>
                                 </div>
-                                <span class="input-group-text" style="margin-top: 14px !important;">Reason
+
+                                <span class="input-group-text"
+                                    style="margin-top: 14px !important; padding: .375rem .75rem !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">Reason
                                     for
-                                    Discounting Previous Style</span>
+                                    Discounting</span>
                                 <div class="input-group">
-                                    <input type="text" name="reason" placeholder=""
-                                        class="form-control form-control-sm" required>
+                                    <input type="text" name="reason" placeholder="" class="form-control form-control-sm"
+                                        style="border-top-left-radius: 0; border-top-right-radius: 0;" required>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="row square">
                                 <span class="input-group-text"
-                                    style="margin-top: 14px !important;">Motivations
+                                    style="margin-top: 14px !important; padding: .375rem .75rem !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">Motivations
                                     / Reasons for Joining Us</span>
                                 <div class="input-group" style="margin-top: 0 !important;">
-                                    <textarea type="text" name="motivation" placeholder=""
+                                    <textarea type="text" name="motivation" placeholder="" rows="5"
+                                        style="border-top-left-radius: 0; border-top-right-radius: 0;"
                                         class="form-control form-control-sm"></textarea>
                                 </div>
 
-                                <span class="input-group-text" style="margin-top: 28px !important;">How they
+                                <span class="input-group-text"
+                                    style="margin-top: 26px !important; padding: .375rem .75rem !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">How
+                                    they
                                     heard about us</span>
                                 <div class="input-group" style="margin-bottom: 14px !important;">
-                                    <textarea type="text" name="heard" placeholder=""
+                                    <textarea type="text" name="heard" placeholder="" rows="4"
+                                        style="border-top-left-radius: 0; border-top-right-radius: 0;"
                                         class="form-control form-control-sm"></textarea>
                                 </div>
                             </div>
@@ -261,9 +278,11 @@
                 </div>
                 <div class="col-3">
                     <div class="row square" style="margin-right: 8px !important;">
-                        <span class="input-group-text" style="text-align: center;">Notes</span>
-                        <div class="input-group" style="margin-top: 0px !important;">
-                            <textarea type="text" rows="20" name="notes" placeholder=""
+                        <span class="input-group-text"
+                            style="text-align: center; padding: .375rem .75rem !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">Notes</span>
+                        <div class="input-group"
+                            style="margin-top: 0px !important; border-top-left-radius: 0; border-top-right-radius: 0; margin-bottom: 12px !important;">
+                            <textarea type="text" rows="25" name="notes" placeholder=""
                                 class="form-control form-control-sm"></textarea>
                         </div>
                     </div>
@@ -272,7 +291,8 @@
             <div class="row">
                 <div class="col-7">
                     <div class="row square">
-                        <p class="h4 center">Approximate Rank Tests Based on Enrollment Date</p>
+                        <p class="h4 center">Approximate Rank Promotion Date or Test Date<br />(based on 1st Level Date)
+                        </p>
 
                         <span style="margin-top: 8px !important;">Do Students take their first test to get
                             1<sup>st</sup> Level (White
@@ -398,46 +418,64 @@
                             </div>
                             <div class="col-5">
                                 <input type="number" name="tuitionamount" placeholder=""
-                                    class="form-control form-control-sm" min="1" max="200" step="1"
-                                    required>
+                                    class="form-control form-control-sm" min="1" max="200" step="1" required>
                             </div>
                         </div>
 
                         <div class="row" style="margin-top: 8px !important;">
                             <div class="col-6">
                                 <span><b>Payment Due</b></span>
-                                <div class="input-group"
-                                    style="border: 1px solid black; padding: 4px !important;">
-                                    <span class="input-group-text">Every</span>
+                                <div id="monthlyPanel" class="input-group"
+                                    style="border: 1px solid black; padding: 4px !important; margin-top: 8px !important;">
+                                    <span class="input-group-text" style="border-bottom-left-radius: 0;">Every</span>
                                     <input type="number" class="form-control" min="1" max="31" step="1"
                                         name="monthstart">
-                                    <span class="input-group-text"><sup>th</sup> day of the month</span>
+                                    <span class="input-group-text" style="width: 100%;">day of the month</span>
                                 </div>
-                                <div class="input-group"
-                                    style="border: 1px solid black; padding: 4px !important; margin-top: 8px !important;">
-                                    <span class="input-group-text">Every</span>
-                                    <input type="number" class="form-control" min="1" max="12" step="1"
-                                        name="yearstart">
-                                    <span class="input-group-text">of the following year</span>
+                                <div id="annualPanel" class="input-group"
+                                    style="display: none; border: 1px solid black; padding: 4px !important; margin-top: 8px !important;">
+                                    <span class="input-group-text" style="border-bottom-left-radius: 0;">Day</span>
+                                    <input type="date" class="form-control" name="yearstart">
+                                    <span class="input-group-text" style="width: 100%;">of the following year</span>
                                 </div>
+
+                                <div id="otherPanel"
+                                    style="display: none; border: 1px solid black; padding: 4px !important; margin-top: 8px !important;">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="everyamount"
+                                            style="border-bottom-left-radius: 0;">
+                                        <label class="input-group-text" for="inputGroupSelect01"
+                                            style="border-bottom-right-radius: 0;">Every</label>
+                                    </div>
+                                    <div class="input-group" style="margin-top: 0 !important;">
+                                        <input type="text" class="form-control" name="everytype"
+                                            style="border-top-left-radius: 0;">
+                                        <select class="form-select" name="every" style="border-top-right-radius: 0;">
+                                            <option selected>Choose...</option>
+                                            <option value="months">Months</option>
+                                            <option value="weeks">Weeks</option>
+                                            <option value="days">Days</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="col-1"></div>
                             <div class="col-4" style="padding-top: 36px !important;">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="tuitionperiod"
-                                        checked>
+                                    <input class="form-check-input" type="radio" name="tuitionperiod" value="m" checked>
                                     <label class="form-check-label">
                                         Monthly
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="tuitionperiod">
+                                    <input class="form-check-input" type="radio" name="tuitionperiod" value="a">
                                     <label class="form-check-label">
                                         Annual
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="tuitionperiod">
+                                    <input class="form-check-input" type="radio" name="tuitionperiod" value="o">
                                     <label class="form-check-label">
                                         Other
                                     </label>
@@ -454,8 +492,7 @@
                                     <label class="form-check-label">
                                         Yes
                                     </label>
-                                    <input class="form-check-input" type="radio" name="uponEnrollment"
-                                        checked>
+                                    <input class="form-check-input" type="radio" name="uponEnrollment" checked>
                                 </div>
                                 <div class="col-2">
                                     <label class="form-check-label">
@@ -470,13 +507,43 @@
                             <span style="margin-top: 8px !important;">Actual Fees and Penalties should be
                                 Agreed Upon and Signed Prior to enrollment</span>
                         </div>
+
+                        <div class="row" style="margin: 139px 0px !important;">
+                            <span style="margin-top: 8px !important;">Is Waiver Signed or Not?</span>
+                            <div class="row">
+                                <div class="col-6"></div>
+                                <div class="col-2">
+                                    <label class="form-check-label">
+                                        Yes
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="waiver" value="y">
+                                </div>
+                                <div class="col-2">
+                                    <label class="form-check-label">
+                                        No
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="waiver" value="n" checked>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="waiver-container" style="display: none;">
+                <div class="col-12">
+                    <div class="row square" id="waiver-row">
+                        <input type="file" id="waiver" name="waiver" accept="image/*">
+                        <img src="" alt="" id="waiver_preview"
+                            style="max-width: 100%; height: auto; min-height: 100px; display: block;">
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <button type="submit" class="button" style="position: absolute; bottom: 64px; right: 32px;">Save to
+        <button type="submit" class="button" style="position: absolute; bottom: 48px; right: 48px;">Save to
             Add
             Student</button>
     </form>
