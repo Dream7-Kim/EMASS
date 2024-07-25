@@ -1,0 +1,280 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'main/classschedule.css' %}">
+{% endblock %}
+
+{% block leftbar %}
+<div class="left-bar-items">
+    <div class="left-bar-item">
+        <a href="newuser">Add New Student</a>
+    </div>
+    <div class="left-bar-item current">
+        <a href="classschedule">Class Schedule</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Membership Plans</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Rank Requirements</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Newsletters</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Documents</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Videos</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Events</a>
+    </div>
+    <div class="left-bar-item">
+        <a href="">Merchandise</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div id="main">
+    <div class="row" style="position: sticky; top: 0; width: 100%; background-color: {{ bccolor }}; z-index: 100;">
+        <p class="h1 text-center">Class Schedule</p>
+        <div class="clock"></div>
+    </div>
+    <div class="row" style="margin-top: 0px;">
+        <div class="col-6">
+            <div class="box" style="background: #FCD314;">
+                <div class="row" style="justify-content: center; position: relative;">
+                    <p class="h2 text-center">Monday</p>
+                    <p class="h3 rowname" style="position: absolute; bottom: 0; left: 0; width: auto !important;">Class
+                        Name</p>
+                    <p class="h3 rowname" style="position: absolute; bottom: 0; right: 0; width: auto !important;">Class
+                        Time
+                    </p>
+                </div>
+                <div class="row">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="box" style="background-color: #FFE3B0;">
+                <div class="row" style="justify-content: center; position: relative;">
+                    <p class="h2 text-center">Tuesday</p>
+                    <p class="h3 rowname" style="position: absolute; bottom: 0; left: 0; width: auto !important;">Class
+                        Name</p>
+                    <p class="h3 rowname" style="position: absolute; bottom: 0; right: 0; width: auto !important;">Class
+                        Time
+                    </p>
+                </div>
+                <div class="row">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>
+                                Tiny Tigers
+                            </td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="box" style="background-color: #AFE0C0;">
+                <div class="row" style="justify-content: center; position: relative;">
+                    <p class="h2 text-center">Wednesday</p>
+                    <p class="h3 rowname" style="position: absolute; bottom: 0; left: 0; width: auto !important;">Class
+                        Name</p>
+                    <p class="h3 rowname" style="position: absolute; bottom: 0; right: 0; width: auto !important;">Class
+                        Time
+                    </p>
+                </div>
+                <div class="row">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="box" style="background-color: #ACC5E6;">
+                <div class="row" style="justify-content: center; position: relative;">
+                    <p class="h2 text-center">Thursday</p>
+                    <p class="h3 rowname" style="position: absolute; bottom: 0; left: 0; width: auto !important;">Class
+                        Name</p>
+                    <p class="h3 rowname" style="position: absolute; bottom: 0; right: 0; width: auto !important;">Class
+                        Time
+                    </p>
+                </div>
+                <div class="row">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="box" style="background-color: #B56EA7;">
+                <div class="row" style="justify-content: center; position: relative;">
+                    <p class="h2 text-center">Friday</p>
+                    <p class="h3 rowname" style="position: absolute; bottom: 0; left: 0; width: auto !important;">Class
+                        Name</p>
+                    <p class="h3 rowname" style="position: absolute; bottom: 0; right: 0; width: auto !important;">Class
+                        Time
+                    </p>
+                </div>
+                <div class="row">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tiny Tigers</td>
+                            <td>4:30 - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'main/js/classschedule.js' %}"></script>
+{% endblock %}

@@ -28,6 +28,18 @@ def newuser(request):
         'levelrange': levelrange
     })
 
+@csrf_exempt
+def classschedule(request):
+    if request.method == 'GET':
+        pass
+    elif request.method == 'POST':
+        print(request.POST.get('new_value'))
+    bccolor = getBCcolor()
+    return render(request, 'main/classschedule.html', {
+        'bccolor': bccolor
+    })
+
+
 # APIs
 @csrf_exempt
 def instruction(request):
