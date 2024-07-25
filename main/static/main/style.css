@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 220px;
+    width: 200px;
     flex-shrink: 0;
 }
 
@@ -39,10 +39,10 @@ body {
 }
 
 .logo img {
-    width: 200px;
+    width: 180px;
     z-index: 1;
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 10px;
 }
 
@@ -76,7 +76,7 @@ body {
 .left-bar-item a {
     text-decoration: none;  /* Remove underline */
     color: inherit;         /* Inherit the color from the parent element */
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     font-weight: 600;
     width: 100%;
     display: block;
@@ -143,7 +143,7 @@ a {
 .top-bar-item a {
     text-decoration: none;  /* Remove underline */
     color: inherit;         /* Inherit the color from the parent element */
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     font-weight: 600;
     width: 100%;
     display: block;
@@ -227,7 +227,7 @@ textarea {
 }
 
 .current a {
-    font-size: 2rem !important;
+    font-size: 2.5rem !important;
 }
 
 .color-panel {
@@ -250,7 +250,7 @@ textarea {
 }
 
 .color1 {
-    background-color: #FEDE75;
+    background-color: #FDB915;
 }
 
 .color2 {
@@ -266,6 +266,10 @@ textarea {
 }
 
 .color5 {
-    background-color: #CC8899;
+    background-color: #A66FB5;
+}
+
+.color6 {
+    background-color: #FBEEAC;
 }
 
