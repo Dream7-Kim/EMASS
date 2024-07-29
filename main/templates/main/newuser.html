@@ -14,12 +14,6 @@
         <a href="classschedule">Class Schedule</a>
     </div>
     <div class="left-bar-item">
-        <a href="">Membership Plans</a>
-    </div>
-    <div class="left-bar-item">
-        <a href="">Rank Requirements</a>
-    </div>
-    <div class="left-bar-item">
         <a href="">Newsletters</a>
     </div>
     <div class="left-bar-item">
@@ -44,9 +38,14 @@
             <div class="row">
                 <div class="col-2">
                     <div class="row square"
-                        style="height: calc(100% - 6px); justify-content: center; align-items: center;" id="avatar">
+                        style="aspect-ratio: 1 / 1; justify-content: center; align-items: center; position: relative;"
+                        id="avatar">
                         <input type="file" id="image" name="image" accept="image/*">
                         <img src="" alt="" id="preview" style="max-width: 100%; height: auto; display: block;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                            <p style="font-size: 1.5rem; text-align: center; padding: 0.5rem;">Upload Picture Here.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-10">
@@ -78,7 +77,7 @@
                                 </div>
                             </div>
                             <div class="row square">
-                                <div class="col-12">
+                                <div class="col-8">
                                     <div class="input-group">
                                         <span class="input-group-text">Birthday</span>
                                         <input type="date" name="birthday" placeholder="Birthday"
@@ -139,8 +138,7 @@
                             <input type="text" name="ec1relationship" placeholder="Relationship"
                                 class="form-control form-control-sm" required>
                         </div>
-                    </div>
-                    <div class="row square">
+
                         <div class="input-group">
                             <span class="input-group-text">Emergency Contact #2</span>
                             <input type="text" name="ec2name" placeholder="Name" class="form-control form-control-sm"
@@ -190,19 +188,10 @@
                         <div class="col-6">
                             <div class="row square">
                                 <span class="input-group-text"
-                                    style="padding: .375rem .75rem !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">Previous
-                                    Training Instructor</span>
-                                <div class="input-group" style="margin-top: 0 !important;">
-                                    <input type="text" name="previousTraningInstructor" placeholder=""
-                                        class="form-control form-control-sm"
-                                        style="border-top-left-radius: 0; border-top-right-radius: 0;">
-                                </div>
-
-                                <span class="input-group-text"
                                     style="margin-top: 14px !important; padding: .375rem .75rem !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">Previous
-                                    Training Style</span>
+                                    Training / Style</span>
                                 <div class="input-group" style="margin-top: 0 !important;">
-                                    <input type="text" name="previousTraningStyle" placeholder=""
+                                    <input type="text" name="previousTraning" placeholder=""
                                         class="form-control form-control-sm"
                                         style="border-top-left-radius: 0; border-top-right-radius: 0;">
                                 </div>
@@ -235,7 +224,7 @@
                                     style="margin-top: 14px !important; padding: .375rem .75rem !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">Motivations
                                     / Reasons for Joining Us</span>
                                 <div class="input-group" style="margin-top: 0 !important;">
-                                    <textarea type="text" name="motivation" placeholder="" rows="5"
+                                    <textarea type="text" name="motivation" placeholder="" rows="2"
                                         style="border-top-left-radius: 0; border-top-right-radius: 0;"
                                         class="form-control form-control-sm"></textarea>
                                 </div>
@@ -244,10 +233,30 @@
                                     style="margin-top: 26px !important; padding: .375rem .75rem !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">How
                                     they
                                     heard about us</span>
-                                <div class="input-group" style="margin-bottom: 14px !important;">
+                                <div class="input-group" style="margin-bottom: 8px !important;">
                                     <textarea type="text" name="heard" placeholder="" rows="4"
                                         style="border-top-left-radius: 0; border-top-right-radius: 0;"
                                         class="form-control form-control-sm"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 0 !important; margin-right: 0 !important;">
+                        <div class="col-6">
+                            <div class="row square">
+                                <div class="input-group" style="margin: 6px 0 !important;">
+                                    <span class="input-group-text">Class Assigned</span>
+                                    <input type="text" name="classAssigned" placeholder=""
+                                        class="form-control form-control-sm" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row square">
+                                <div class="input-group" style="margin: 6px 0 !important;">
+                                    <span class="input-group-text">Membership Plan</span>
+                                    <input type="text" name="membershipPlan" placeholder=""
+                                        class="form-control form-control-sm" required>
                                 </div>
                             </div>
                         </div>
@@ -311,13 +320,27 @@
                         </div> -->
 
                         <div class="row" style="margin-top: 24px !important;">
+                            <div class="row" style="padding-bottom: 12px !important;">
+                                <div class="col-3">
+
+                                </div>
+                                <div class="col-2" style="border: 1px solid #aaaaaa;">
+                                    Rank Name
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-5" style="border: 1px solid #aaaaaa;">
+                                    Promotion / Test Date
+                                </div>
+                            </div>
+
                             <div class="row">
                                 <div class="col-3">
                                     <span>1<sup>st</sup> Level</span>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2" style="border: 1px solid #aaaaaa;">
 
                                 </div>
+                                <div class="col-1"></div>
                                 <div class="col-5">
                                     <input type="date" name="level1date" placeholder=""
                                         class="form-control form-control-sm">
@@ -328,9 +351,10 @@
                                 <div class="col-3">
                                     <span>2<sup>nd</sup> Level</span>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2" style="border: 1px solid #aaaaaa;">
 
                                 </div>
+                                <div class="col-1"></div>
                                 <div class="col-5">
                                     <input type="date" name="level2date" placeholder=""
                                         class="form-control form-control-sm">
@@ -341,9 +365,10 @@
                                 <div class="col-3">
                                     <span>3<sup>rd</sup> Level</span>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2" style="border: 1px solid #aaaaaa;">
 
                                 </div>
+                                <div class="col-1"></div>
                                 <div class="col-5">
                                     <input type="date" name="level3date" placeholder=""
                                         class="form-control form-control-sm">
@@ -355,9 +380,10 @@
                                 <div class="col-3">
                                     <span>{{ level }}<sup>th</sup> Level</span>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2" style="border: 1px solid #aaaaaa;">
 
                                 </div>
+                                <div class="col-1"></div>
                                 <div class="col-5">
                                     <input type="date" name="level{{ level }}date" placeholder=""
                                         class="form-control form-control-sm">
@@ -370,6 +396,12 @@
                 <div class="col-5">
                     <div class="row square">
                         <p class="h4 center">Payment Agreement</p>
+
+                        <div class="input-group" style="margin: 2px 0 !important; margin-top: 10px !important;">
+                            <span class="input-group-text">Membership Plan</span>
+                            <input type="text" name="membershipPlan1" placeholder=""
+                                class="form-control form-control-sm" required>
+                        </div>
 
                         <div class="row" style="margin-top: 8px !important;">
                             <div class="col-6">
@@ -390,12 +422,13 @@
                         </div>
 
                         <div class="row" style="margin-top: 8px !important;">
-                            <div class="col-6">
-                                <span>Tuition Amount</span>
+                            <div class="col-6" style="align-items: center; display: flex;">
+                                <span style="font-size: larger; font-weight: bolder;">Tuition Amount</span>
                             </div>
                             <div class="col-5">
                                 <input type="number" name="tuitionamount" placeholder=""
-                                    class="form-control form-control-sm" min="1" max="200" step="1" required>
+                                    style="font-size: larger; font-weight: bolder;" class="form-control form-control-sm"
+                                    min="1" max="200" step="1" required>
                             </div>
                         </div>
 
@@ -438,7 +471,7 @@
 
                             </div>
                             <div class="col-1"></div>
-                            <div class="col-4" style="padding-top: 36px !important;">
+                            <div class="col-4" style="padding-top: 36px !important;" id="PaymentDue">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="tuitionperiod" value="m" checked>
                                     <label class="form-check-label">

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.color-panel').style.display = 'flex';
         document.querySelector('.color-panel').style.left = e.clientX + 'px';
         document.querySelector('.color-panel').style.top = e.clientY + 'px';
+        document.querySelector('.color-panel').style.zIndex = 9999;
     })
     document.querySelectorAll('.bc-color').forEach(ele => {
         ele.addEventListener('click', (e) => {
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     console.error('Error:', error);
                 });
             document.getElementById('app').style.backgroundColor = backgroundColor;
+            document.getElementById('classScheduleHeader').style.backgroundColor = backgroundColor;
             document.querySelector('.color-panel').style.display = 'none';
         })
     })

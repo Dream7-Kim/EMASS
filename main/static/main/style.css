@@ -7,11 +7,11 @@ html, body {
 
 * {
     box-sizing: border-box;
+    font-weight: bolder !important;
 }
 
 body {    
     font-family: 'Calibri', 'times new roman' !important;
-    font-weight: 700 !important;
     margin: 0;
     padding: 0;
 }
@@ -39,11 +39,11 @@ body {
 }
 
 .logo img {
-    width: 180px;
+    width: 120px;
     z-index: 1;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 40px;
+    left: 40px;
 }
 
 .red-bc {

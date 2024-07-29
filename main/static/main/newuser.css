@@ -58,3 +58,20 @@
 span {
     font-weight: 500;
 }
+
+#PaymentDue > div > input + label {
+    /* color: red !important; */
+}
+
+#PaymentDue > div > input:checked + label {
+    color: #64FF30 !important;
+}
+
+button:hover {
+    border: 1px solid #64FF30;
+    color: #64FF30;
+}
+
+button {
+    transition: all 0.4s ease;
+}
